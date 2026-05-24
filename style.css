@@ -50,6 +50,7 @@ body {
     border-bottom: 1px solid var(--Body-Text);
 
     height: 35vh;
+    cursor: pointer;
 }
 
 #modal > .BookDetails > .edit {
@@ -169,7 +170,7 @@ main {
 }
 
 #MainPanel > .books > .book {
-    height: 18rem;
+    height: fit-content;
     width: 18rem;
 
     background-color: var(--Card-Background);

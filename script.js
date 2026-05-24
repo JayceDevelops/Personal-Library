@@ -1,9 +1,20 @@
-let books = [];
+let books = JSON.parse(localStorage.getItem("books"));
+
+if (books === null){
+    books = [];
+    let booksSerilized = JSON.stringify(books);
+    localStorage.setItem("books", booksSerilized);
+}
+
+console.log(books);
+
+showBooks(books);
 
 const search = document.querySelector('#search > input');
 
 const save = document.querySelector('.save');
 const cancel = document.querySelector('.cancel');
+const deleteButton = document.querySelector('.delete');
 const modal = document.querySelector('#modal');
 
 const bookTitleInput = document.querySelector('input[title="BookTitle"]');
@@ -38,6 +49,11 @@ function AddBook(bookTitle, author, pages, genre, completed) {
     const newBook = new Book(bookTitle, author, pages, genre, completed);
     books.push(newBook);
 
+    booksSerilized = JSON.stringify(books);
+    localStorage.setItem("books", booksSerilized);
+    
+    books = JSON.parse(localStorage.getItem("books"));
+
     showBooks(books);
 }
 
@@ -69,11 +85,13 @@ function showBooks(passedBooks) {
 
             currentBook = bookObject;
 
-            const deleteButton = document.querySelector('.delete');
             deleteButton.style.display = 'inline-block';
 
             deleteButton.addEventListener("click", () => {
                 books = books.filter(bookObj => bookObj.ID !== bookObject.ID);
+
+                let booksSerilized = JSON.stringify(books);
+                localStorage.setItem("books", booksSerilized);
                 modal.style.display = 'none';
                 showBooks(books);
             });
@@ -126,7 +144,7 @@ function showBooks(passedBooks) {
 
         bookDiv.appendChild(book);
     });
-}
+};
 
 const addBookButton = document.querySelector('.add');
 addBookButton.addEventListener("click", () => {
@@ -134,6 +152,8 @@ addBookButton.addEventListener("click", () => {
     modal.style.display = 'flex';
     modal.style.alignItems = 'center';
     modal.style.justifyContent = 'center';
+
+    deleteButton.style.display = 'none';
 
     const image = document.querySelector('.BookDetails > .image');
     image.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="50" height="50" fill="white"><title>Upload Image</title><path d="M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M13,7H11V11H7V13H11V17H13V13H17V11H13V7Z" /></svg>`;
@@ -184,6 +204,10 @@ save.addEventListener("click", () => {
         currentBook.Completed = wasRead.checked;
 
         modal.style.display = 'none';
+
+        let booksSerilized = JSON.stringify(books);
+        localStorage.setItem("books", booksSerilized);
+        
         showBooks(books);
     }
 });
@@ -298,3 +322,4 @@ function getFilteredBookByGenre(){
 
     return filteredBooks;
 }
+
