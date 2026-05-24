@@ -1,0 +1,290 @@
+:root {
+    --Logo-Text: #D4AF37;
+    --Primary-Background: #121824;
+    --Card-Background: #1E293B;
+    --Heading-Text: #F8FAFC;
+    --Body-Text: #94A3B8; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--Primary-Background);
+    overflow: hidden;
+}
+
+#modal {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+
+    display: none;
+    
+}
+
+#modal > .BookDetails {
+    height: max-content;
+    width: 35%;
+
+    background-color: var(--Card-Background);
+    border: 2px solid var(--Body-Text);
+    border-radius: 25px;
+
+    display: grid;
+    grid-template-rows: min-content auto min-content;
+}
+
+#modal > .BookDetails > .image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-radius: 25px 25px 0 0;
+
+    height: 35vh;
+}
+
+#modal > .BookDetails > .edit {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+#modal > .BookDetails > .edit > input {
+    padding-top: 1rem;
+    margin-bottom: 2.5rem;
+
+    background-color: transparent;
+
+    outline: none;
+    border: none;
+    border-bottom: 1px solid var(--Primary-Background);
+
+    font-size: 1rem;
+}
+
+#modal > .BookDetails > .edit > .buttons {
+    display: flex;
+    justify-content: space-evenly;
+
+    padding: 2rem 0 1rem 0; 
+}
+
+#modal > .BookDetails > .edit > .buttons > button{
+    width: 25%;
+    height: 2.5rem;
+    
+    border-radius: 10px;
+    border: none;
+    outline: none;
+
+    background-color: var(--Primary-Background);
+}
+
+#modal > .BookDetails > .edit > .buttons > .cancel{
+    background-color: tomato;
+}
+
+
+
+
+main {
+    display: grid;
+    grid-template-rows: min-content auto;
+}
+
+#content{
+    display: grid;
+    grid-template-columns: min-content auto;
+}
+
+#MainPanel {
+    display: grid;
+    grid-template-rows: min-content auto;
+}
+
+#MainPanel > .headers {
+    padding-top: 4.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    padding-right: 3rem;
+}
+
+#MainPanel > .headers > button {
+    width: 3rem;
+    height: 3rem;
+
+    background-color: var(--Card-Background);
+
+    border: none;
+    border-radius: 100px;
+
+    font-size: 1.5rem;
+}
+
+#MainPanel > .books  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: 1;
+    padding-right: 3rem;
+    gap: 1rem;
+}
+
+#MainPanel > .books > .book {
+    height: 18rem;
+    width: 18rem;
+
+    background-color: var(--Card-Background);
+
+    border-radius: 25px;
+
+    display: grid;
+    grid-template-rows: min-content auto;
+}
+
+#MainPanel > .books > .book > .image{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    border-radius: 25px 25px 0 0;
+
+    height: 8rem;
+    width: 100%;
+
+    display: flex;
+    justify-content: end;
+}
+
+#MainPanel > .books > .book > .image > svg{
+
+    margin: 1rem 1rem 0 0;
+    padding: 0.25rem;
+
+    border-radius: 100%;
+}
+
+
+#MainPanel > .books > .book > .information{
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+
+    letter-spacing: 1px;
+}
+
+#MainPanel > .books > .book > .information > .title{
+    font-size: 1.5rem;
+}
+
+#MainPanel > .books > .book > .information > .details{
+    font-size: 1rem;
+    padding-top: 0.10rem;
+    padding-bottom: 1rem;
+}
+
+#MainPanel > .books > .book > .information > .not-read{
+    color: tomato;
+}
+
+#MainPanel > .books > .book > .information > .read{
+    color: lightgreen;
+}
+
+
+#SidePanel {
+    width: 25rem;
+    height: 100vh;
+
+    padding-top: 5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    gap: 5rem;
+}
+
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.checkboxes h1 {
+    font-size: 1.25rem;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: min-content auto;
+    padding-top: 1rem;
+}
+
+nav > div {
+
+    width: 25rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    font-size: 2rem;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--Logo-Text) !important;
+}
+
+#search {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+#search > input {
+    width: 70%;
+    height: 2rem;
+
+    border: none;
+    outline: none;
+    border-radius: 20px;
+
+    padding-left: 1rem;
+
+    background-color: var(--Card-Background);
+
+    font-size: 1rem;
+}
+
+.Heading-Font {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    color: var(--Heading-Text);
+}
+
+.Body-Font {
+    font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+    color: var(--Body-Text);
+}

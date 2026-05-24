@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Library</title>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cause:wght@100..900&family=Comfortaa:wght@300..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="modal">
+        <div class="BookDetails">
+            <div class="image"></div>
+            <div class="edit">
+                <label class="Heading-Font">Book Title</label>
+                <input title="Harry Potter" class="Body-Font" placeholder="Harry Potter">
+                <label class="Heading-Font">Author</label>
+                <input placeholder="J.K Rowling" class="Body-Font">
+                <label class="Heading-Font">Pages</label>
+                <input placeholder="128" class="Body-Font">
+                <label class="Heading-Font">
+                    <input type="checkbox" title="Book Read">
+                    Read Completed
+                </label>
+                <div class="buttons">
+                    <button class="cancel Heading-Font">Cancel</button>
+                    <button class="save Heading-Font">Save Changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <nav>
+            <div>
+                <h1 class="Heading-Font logo">The Personal</h1>
+                <h3 class="Body-Font">Book Keeper</h3>
+            </div>
+            <div id="search">
+                <input placeholder="Search by title, author, genre..." class="Body-Font">
+            </div>
+        </nav>
+        <div id="content">
+            <div id="SidePanel">
+                <div class="checkboxes">
+                    <h1 class="Heading-Font">Filters</h1>
+                    <label class="Body-Font">
+                        <input type="checkbox">
+                        All Books
+                    </label>
+                    <label class="Body-Font">
+                        <input type="checkbox">
+                        Read
+                    </label>
+                    <label class="Body-Font">
+                        <input type="checkbox">
+                        Not Read
+                    </label>
+                </div>
+                <div class="checkboxes">
+                    <h1 class="Heading-Font">Genres</h1>
+                    <label class="Body-Font">
+                        <input type="checkbox">
+                        Fiction
+                    </label>
+                    <label class="Body-Font">
+                        <input type="checkbox">
+                        Sci-Fi
+                    </label>
+                    <label class="Body-Font">
+                        <input type="checkbox">
+                        Mystery
+                    </label>
+                    <label class="Body-Font">
+                        <input type="checkbox">
+                        History
+                    </label>
+                </div> 
+            </div>
+
+            <div id="MainPanel">
+                <div class="headers">
+                    <h1 class="Heading-Font">All Books</h1>
+                    <button class="Heading-Font">+</button>
+                </div>
+                <div class="books">
+                    <div class="book">
+                        <div class="image">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="white"><title>pencil</title><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
+                        </div>
+                        <div class="information">
+                            <h1 class="title Heading-Font">Harry Potter</h1>
+                            <h2 class="details Body-Font">J.K Rowling</h2>
+                            <h3 class="details Body-Font">128 Pages</h3>
+                            <h3 class="details Body-Font not-read">Not yet read</h3>
+                        </div>
+                    </div>
+                    <div class="book">
+                        <div class="image">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="white"><title>pencil</title><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
+                        </div>
+                        <div class="information">
+                            <h1 class="title Heading-Font">Harry Potter</h1>
+                            <h2 class="details Body-Font">J.K Rowling</h2>
+                            <h3 class="details Body-Font">128 Pages</h3>
+                            <h3 class="details Body-Font read">Read</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
