@@ -15,17 +15,17 @@
             <div class="image"></div>
             <div class="edit">
                 <label class="Heading-Font">Book Title</label>
-                <input title="BookTitle" class="Body-Font" placeholder="Harry Potter">
+                <input title="BookTitle" class="Body-Font" placeholder="">
                 <label class="Heading-Font">Author</label>
-                <input title="Author" placeholder="J.K Rowling" class="Body-Font">
+                <input title="Author" placeholder="" class="Body-Font">
                 <label class="Heading-Font">Pages</label>
-                <input title="Pages" placeholder="128" class="Body-Font">
+                <input title="Pages" placeholder="" class="Body-Font">
                 <label for="genre" class="Heading-Font">Book Genre</label>
                 <select id="genre" name="genre" class="Body-Font">
-                    <option value="fiction">Fiction</option>
-                    <option value="sci-fi">Sci-Fi</option>
-                    <option value="mystery">Mystery</option>
-                    <option value="history">History</option>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Mystery">Mystery</option>
+                    <option value="History">History</option>
                 </select>
                 <label class="Heading-Font">
                     <input type="checkbox" title="BookRead">
@@ -34,6 +34,7 @@
                 <div class="buttons">
                     <button class="cancel Heading-Font">Cancel</button>
                     <button class="save Heading-Font">Save Changes</button>
+                    <button class="delete Heading-Font">Delete Book</button>
                 </div>
             </div>
         </div>
@@ -45,12 +46,12 @@
                 <h3 class="Body-Font">Library</h3>
             </div>
             <div id="search">
-                <input placeholder="Search by title, author, genre..." class="Body-Font">
+                <input placeholder="Search by book title ..." class="Body-Font">
             </div>
         </nav>
         <div id="content">
             <div id="SidePanel">
-                <div class="checkboxes">
+                <div class="checkboxes radio">
                     <h1 class="Heading-Font">Filters</h1>
                     <label class="Body-Font">
                         <input type="radio" id="All" name="status" checked>
@@ -66,21 +67,21 @@
                     </label>
                 </div>
                 <div class="checkboxes">
-                    <h1 class="Heading-Font">Genres</h1>
+                    <h1 class="Heading-Font ">Genres</h1>
                     <label class="Body-Font">
-                        <input type="checkbox">
+                        <input class="genre" type="checkbox" value="Fiction">
                         Fiction
                     </label>
                     <label class="Body-Font">
-                        <input type="checkbox">
+                        <input class="genre" type="checkbox" value="Sci-Fi">
                         Sci-Fi
                     </label>
                     <label class="Body-Font">
-                        <input type="checkbox">
+                        <input class="genre" type="checkbox" value="Mystery">
                         Mystery
                     </label>
                     <label class="Body-Font">
-                        <input type="checkbox">
+                        <input class="genre" type="checkbox" value="History">
                         History
                     </label>
                 </div> 

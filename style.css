@@ -14,7 +14,6 @@
 body {
     background-color: var(--Primary-Background);
     overflow-y: auto;
-
 }
 
 ::-webkit-scrollbar {
@@ -28,7 +27,6 @@ body {
     backdrop-filter: blur(10px);
 
     display: none;
-    
 }
 
 #modal > .BookDetails {
@@ -110,7 +108,10 @@ body {
     background-color: tomato;
 }
 
-
+#modal > .BookDetails > .edit > .buttons > .delete{
+    background-color: darkred;
+    display: none;
+}
 
 
 main {
@@ -182,7 +183,6 @@ main {
 }
 
 #MainPanel > .books > .book:hover {
-    transform: translateY(-5px);
     box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.5);
 }
 
