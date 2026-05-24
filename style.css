@@ -13,7 +13,12 @@
 
 body {
     background-color: var(--Primary-Background);
-    overflow: hidden;
+    overflow-y: auto;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 #modal {
@@ -39,11 +44,12 @@ body {
 }
 
 #modal > .BookDetails > .image {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     border-radius: 25px 25px 0 0;
+    border-bottom: 1px solid var(--Body-Text);
 
     height: 35vh;
 }
@@ -67,6 +73,19 @@ body {
     font-size: 1rem;
 }
 
+#modal > .BookDetails > .edit > select  {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+
+    border: none;
+    border-radius: 10px;
+    outline: none;
+
+    height: 1.5rem;
+}
+
+
+
 #modal > .BookDetails > .edit > .buttons {
     display: flex;
     justify-content: space-evenly;
@@ -83,6 +102,8 @@ body {
     outline: none;
 
     background-color: var(--Primary-Background);
+
+    letter-spacing: 1px;
 }
 
 #modal > .BookDetails > .edit > .buttons > .cancel{
@@ -93,6 +114,7 @@ body {
 
 
 main {
+    height: fit-content;
     display: grid;
     grid-template-rows: min-content auto;
 }
@@ -127,12 +149,22 @@ main {
     font-size: 1.5rem;
 }
 
+#MainPanel > .headers > button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px -5px black;
+}
+
 #MainPanel > .books  {
     display: flex;
     flex-direction: row;
-    flex-wrap: 1;
+    flex-wrap: wrap;
+
+    height: fit-content;
+
     padding-right: 3rem;
-    gap: 1rem;
+
+    row-gap: 1rem;
+    column-gap: 1rem;
 }
 
 #MainPanel > .books > .book {
@@ -145,13 +177,17 @@ main {
 
     display: grid;
     grid-template-rows: min-content auto;
+
+    cursor: pointer;
 }
 
-#MainPanel > .books > .book > .image{
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+#MainPanel > .books > .book:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.5);
+}
 
+
+#MainPanel > .books > .book > .image{
     border-radius: 25px 25px 0 0;
 
     height: 8rem;
