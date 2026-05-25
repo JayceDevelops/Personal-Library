@@ -11,6 +11,7 @@ Crucially, the application implements persistent data handling via the browser's
 ### Dynamic Book Management Interface
 Below is the main interface of the application, showcasing the interactive bookshelf layout, real-time filtering panels, and the responsive book card matrix:
 <img width="1920" height="998" alt="image" src="https://github.com/user-attachments/assets/b2ac4185-e44b-4e9d-b073-03f8ad1c454b" />
+
 <img width="1920" height="1000" alt="image" src="https://github.com/user-attachments/assets/e2ff8a4a-9eb8-466f-9b66-149448cf112e" />
 
 Easily Add New Books:
