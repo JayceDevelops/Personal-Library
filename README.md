@@ -1,4 +1,4 @@
-📚 Personal Library Dashboard
+""" # 📚 Personal Library Dashboard
 
 A clean, feature-rich web application designed to help book lovers store, organize, and track their reading collections. Built from the ground up using semantic HTML5, custom CSS3 properties, and modular vanilla JavaScript, this app serves as a local digital bookshelf to log books, monitor reading progress, and query personal catalogs instantly. 
 
